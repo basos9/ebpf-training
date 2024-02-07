@@ -199,6 +199,7 @@ func main() {
 		log.Panic("bpf is nil")
 	}
 	defer bpfModule.Close()
+	log.Printf("DEBUG Compiled BPF");
 
 	connectionFactory := connections.NewFactory(time.Minute)
 	go func() {
